@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  		<display-name>ServletJSP01</display-name>
+  		
+<servlet>
+  		
+  	<!-- servlet name kısmına istediğin ismi verbilirisin.  -->
+  	<servlet-name>MyServletName</servlet-name>
+  		
+  	<!-- packagename.classname şeklinde full isim ver! -->
+  	<servlet-class>_01.helloservlet.FirstServlet</servlet-class>
+  		
+</servlet>
+
+<servlet-mapping>
+
+		<!-- yukarıda bir tane servlet tanımlı. Bu servlet ile mapping yaptığımız için nameleri aynı OLMALI -->
+	<servlet-name>MyServletName</servlet-name>
+
+		<!-- url tanımlarken mutlaka '/' KONULMALI... -->
+	<url-pattern>/FirstServletUrl</url-pattern>
+	<url-pattern>/FirstServletUrlNew</url-pattern> 
+		<!-- 2 farklı url adı verilebilir hata vermez. -->
+		<!-- http://localhost:8080/ServletJSP01/FirstServletUr  projeyi çalıştırdığımızda 
+			/ServletJS01 yazması bu hangi proje olduğunu gösteriyor.. -->
+			
+		
+	
+</servlet-mapping> 
+  
+</web-app>
